@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nipponsei- Japanese Cosmetics Store in Bangladesh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1 id="logo">Nipponsei</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active" id="homeLink">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="categoriesLink">Categories <i class="fas fa-chevron-down"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="#" class="sign-in" id="signInLink"><i class="far fa-user"></i> Sign in</a>
+                <div class="search-icon" id="searchIcon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span>🇯🇵 Authentic Japanese Products | Free Shipping on Orders Over 1200 BDT | 100% Original</span>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Categories -->
+        <aside class="sidebar">
+            <div class="categories">
+                <h3>CATEGORIES</h3>
+                <ul id="categoryList"></ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2>PROTECT YOUR SKIN AGAINST HARMFUL RAYS WITH OUR VITAL SUNSCREEN.</h2>
+            </section>
+
+            <!-- Shipping Banner -->
+            <div class="shipping-banner">
+                <p>🚚 Free Shipping on Orders Over 1200 BDT | 📦 Same Day Dispatch</p>
+            </div>
+
+            <!-- Products Section -->
+            <section class="products-section">
+                <h3 class="section-title" id="sectionTitle">RESTOCKED RECENTLY</h3>
+                <div class="product-grid" id="productGrid"></div>
+            </section>
+
+            <!-- Brands Section -->
+            <section class="brands-section">
+                <h3 class="section-title">FEATURED BRANDS</h3>
+                <div class="brands-container" id="brandsContainer"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Nipponsei</h4>
+                <p>Your trusted source for authentic Japanese cosmetics in Bangladesh.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>INFORMATION</h4>
+                <ul>
+                    <li> Dhaka-1216</li>
+                    <li><i class="fas fa-envelope"></i> info@Nipponsei.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Abir. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 🔐 Admin Trigger (Hidden) - ডান পাশের নিচের দিকে ক্লিক করুন -->
+    <div class="admin-trigger" id="adminTrigger"></div>
+
+    <!-- 🔐 Password Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <span class="close" id="closePassword">&times;</span>
+            <h3>🔐 Admin Login</h3>
+            <p>Password দিন:</p>
+            <input type="password" id="adminPassword" placeholder="Enter Password">
+            <button id="submitPassword" class="btn">Login</button>
+        </div>
+    </div>
+
+    <!-- 🔐 Admin Panel (এটি শুধু password দিলেই দেখাবে) -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-header">
+            <h3>📸 Image Upload Panel (Admin Only)</h3>
+            <span class="close-admin" id="closeAdmin">&times;</span>
+        </div>
+        <div class="admin-body">
+            <p><strong>নিয়ম:</strong> Product select করুন → Image select করুন → Upload দিন</p>
+            
+            <label for="productSelect">Product নির্বাচন করুন:</label>
+            <select id="productSelect" class="product-select"></select>
+            
+            <label for="imageUpload">Image নির্বাচন করুন (একাধিক ফাইল):</label>
+            <input type="file" id="imageUpload" accept="image/*" multiple>
+            
+            <button id="uploadBtn" class="upload-btn">📤 Upload Images</button>
+            <div id="uploadMessage" class="upload-message"></div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close" id="closeProduct">&times;</span>
+            <div id="productDetail"></div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal" id="searchModal">
+        <div class="modal-content">
+            <span class="close" id="closeSearch">&times;</span>
+            <h3>🔍 Search Products</h3>
+            <input type="text" id="searchInput" placeholder="Type product name...">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
