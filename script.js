@@ -405,7 +405,7 @@ function setupEventListeners() {
         const password = adminPassword.value;
         
         // এখানে আপনার পছন্দের password দিন
-        if (password === "shinrin@2024") { // আপনি এই password change করতে পারেন
+        if (password === "abir230161") { // আপনি এই password change করতে পারেন
             passwordModal.style.display = 'none';
             adminPanel.style.display = 'block';
             showMessage('✅ Admin login successful!', 'success');
@@ -468,4 +468,5 @@ function setupEventListeners() {
         if (e.target === productModal) productModal.style.display = 'none';
         if (e.target === passwordModal) passwordModal.style.display = 'none';
     });
+
 }
